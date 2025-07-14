@@ -41,12 +41,15 @@ def open_website_and_keep_open():
             # Find login_id field and fill
             login_id_field = driver.find_element(By.NAME, "login_id")
             login_id_field.clear()
-            login_id_field.send_keys("outward")
+            login_id_field.send_keys("example_user")  # Replace with actual login ID
+            # login_id_field.send_keys("outward")
             
             # Find login_password field and fill
             password_field = driver.find_element(By.NAME, "login_password")
             password_field.clear()
-            password_field.send_keys("ow_outward")
+            password_field.send_keys("exampler_user222")
+            # password_field.send_keys("ow_outward")
+            # Replace with actual password
             
             # Find and click login button
             login_button = driver.find_element(By.XPATH, "//button[@type='submit' and contains(@class, 'button')]")
@@ -57,8 +60,11 @@ def open_website_and_keep_open():
             print("Login successful!")
             
             # First go to tokyo-static01.webow.jp to authenticate basic auth
+            # print("Going to tokyo-static01.webow.jp to authenticate basic auth...")
+            # static_url = "https://tokyo:tokyo2024@tokyo-static01.webow.jp/"
+            # driver.get(static_url)
             print("Going to tokyo-static01.webow.jp to authenticate basic auth...")
-            static_url = "https://tokyo:tokyo2024@tokyo-static01.webow.jp/"
+            static_url = "https://hakata:hakata2024@testing.hakatak.webow.jp/"
             driver.get(static_url)
             
             # Wait for page to load
